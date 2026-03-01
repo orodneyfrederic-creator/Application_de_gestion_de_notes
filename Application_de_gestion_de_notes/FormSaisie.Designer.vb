@@ -22,6 +22,7 @@ Partial Class FormSaisie
     'Ne la modifiez pas à l'aide de l'éditeur de code.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormSaisie))
         Panel2 = New Panel()
         cmbEtablissement = New ComboBox()
         Label3 = New Label()
@@ -262,6 +263,7 @@ Partial Class FormSaisie
         Controls.Add(Button1)
         Controls.Add(dgvEtudiants)
         Controls.Add(PictureBox1)
+        Icon = CType(resources.GetObject("$this.Icon"), Icon)
         Name = "FormSaisie"
         Text = "FormSaisie"
         Panel2.ResumeLayout(False)

@@ -165,6 +165,7 @@ Partial Class Form1
         Controls.Add(Panel1)
         Controls.Add(Label1)
         Controls.Add(PictureBox1)
+        Icon = CType(resources.GetObject("$this.Icon"), Icon)
         Name = "Form1"
         Text = "Page de connection"
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()

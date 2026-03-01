@@ -22,6 +22,7 @@ Partial Class NoteSaisie
     'Ne la modifiez pas à l'aide de l'éditeur de code.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(NoteSaisie))
         dgvNotes = New DataGridView()
         Panel1 = New Panel()
         lblMoyenne = New Label()
@@ -36,6 +37,7 @@ Partial Class NoteSaisie
         Cours = New Label()
         Button3 = New Button()
         Label1 = New Label()
+        Label2 = New Label()
         CType(dgvNotes, ComponentModel.ISupportInitialize).BeginInit()
         Panel1.SuspendLayout()
         Panel2.SuspendLayout()
@@ -45,7 +47,7 @@ Partial Class NoteSaisie
         ' dgvNotes
         ' 
         dgvNotes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        dgvNotes.Location = New Point(33, 64)
+        dgvNotes.Location = New Point(33, 83)
         dgvNotes.Name = "dgvNotes"
         dgvNotes.RowHeadersWidth = 51
         dgvNotes.Size = New Size(521, 244)
@@ -181,11 +183,23 @@ Partial Class NoteSaisie
         Label1.TabIndex = 9
         Label1.Text = "Etablissement"
         ' 
+        ' Label2
+        ' 
+        Label2.AutoSize = True
+        Label2.Font = New Font("Constantia", 16.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label2.Location = New Point(203, 19)
+        Label2.Name = "Label2"
+        Label2.Size = New Size(546, 35)
+        Label2.TabIndex = 10
+        Label2.Text = "Gestion de la saisie des différentes notes"
+        ' 
         ' NoteSaisie
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
+        BackColor = Color.Lavender
         ClientSize = New Size(1029, 601)
+        Controls.Add(Label2)
         Controls.Add(Label1)
         Controls.Add(Button3)
         Controls.Add(Cours)
@@ -196,6 +210,7 @@ Partial Class NoteSaisie
         Controls.Add(Panel2)
         Controls.Add(Panel1)
         Controls.Add(dgvNotes)
+        Icon = CType(resources.GetObject("$this.Icon"), Icon)
         Name = "NoteSaisie"
         Text = "NoteSaisie"
         CType(dgvNotes, ComponentModel.ISupportInitialize).EndInit()
@@ -221,4 +236,5 @@ Partial Class NoteSaisie
     Friend WithEvents Button3 As Button
     Friend WithEvents cmbEtablissement As ComboBox
     Friend WithEvents Label1 As Label
+    Friend WithEvents Label2 As Label
 End Class

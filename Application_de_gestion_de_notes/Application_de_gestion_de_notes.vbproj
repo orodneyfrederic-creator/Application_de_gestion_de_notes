@@ -6,7 +6,12 @@
     <StartupObject>Sub Main</StartupObject>
     <UseWindowsForms>true</UseWindowsForms>
     <MyType>WindowsForms</MyType>
+    <ApplicationIcon>icons8-school-50.ico</ApplicationIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="icons8-school-50.ico" />
+  </ItemGroup>
 
   <ItemGroup>
     <Import Include="System.Data" />

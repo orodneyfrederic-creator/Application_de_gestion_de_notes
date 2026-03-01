@@ -22,6 +22,7 @@ Partial Class FormResults
     'Ne la modifiez pas à l'aide de l'éditeur de code.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormResults))
         Label1 = New Label()
         dgvResultats = New DataGridView()
         Button1 = New Button()
@@ -141,6 +142,7 @@ Partial Class FormResults
         Controls.Add(Button1)
         Controls.Add(dgvResultats)
         Controls.Add(Label1)
+        Icon = CType(resources.GetObject("$this.Icon"), Icon)
         Name = "FormResults"
         Text = "FormResults"
         CType(dgvResultats, ComponentModel.ISupportInitialize).EndInit()

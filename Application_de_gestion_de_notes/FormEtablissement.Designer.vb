@@ -22,6 +22,7 @@ Partial Class FormEtablissement
     'Ne la modifiez pas à l'aide de l'éditeur de code.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormEtablissement))
         PictureBox1 = New PictureBox()
         DataGridView1 = New DataGridView()
         Button1 = New Button()
@@ -229,6 +230,7 @@ Partial Class FormEtablissement
         Controls.Add(Button1)
         Controls.Add(DataGridView1)
         Controls.Add(PictureBox1)
+        Icon = CType(resources.GetObject("$this.Icon"), Icon)
         Name = "FormEtablissement"
         Text = "FormEtablissement"
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()

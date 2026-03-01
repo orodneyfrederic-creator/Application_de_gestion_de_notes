@@ -22,6 +22,7 @@ Partial Class Acceuil
     'Ne la modifiez pas à l'aide de l'éditeur de code.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Acceuil))
         Panel1 = New Panel()
         Button2 = New Button()
         Button1 = New Button()
@@ -268,6 +269,7 @@ Partial Class Acceuil
         Controls.Add(Panel2)
         Controls.Add(PictureBox2)
         Controls.Add(Panel1)
+        Icon = CType(resources.GetObject("$this.Icon"), Icon)
         Name = "Acceuil"
         Text = "Menu principal"
         Panel1.ResumeLayout(False)
